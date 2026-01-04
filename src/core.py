@@ -267,9 +267,9 @@ def demo_mode():
     print(f"\n{Colors.BOLD}Signature Verification:{Colors.RESET}")
     valid = toolkit.verify(token, secret)
     if valid:
-        print(f"  {Colors.GREEN}✓ Signature valid{Colors.RESET}")
+        print(f"  {Colors.GREEN}[OK] Signature valid{Colors.RESET}")
     else:
-        print(f"  {Colors.RED}✗ Signature invalid{Colors.RESET}")
+        print(f"  {Colors.RED}[FAIL] Signature invalid{Colors.RESET}")
     
     # Analyze
     print(f"\n{Colors.BOLD}Claim Analysis:{Colors.RESET}")
@@ -329,9 +329,9 @@ def main():
         valid = toolkit.verify(args.token, args.verify)
         print(f"\n{Colors.BOLD}Verification:{Colors.RESET}")
         if valid:
-            print(f"  {Colors.GREEN}✓ Signature valid{Colors.RESET}")
+            print(f"  {Colors.GREEN}[OK] Signature valid{Colors.RESET}")
         else:
-            print(f"  {Colors.RED}✗ Signature invalid{Colors.RESET}")
+            print(f"  {Colors.RED}[FAIL] Signature invalid{Colors.RESET}")
     
     if args.none:
         none_token = toolkit.create_none_token(args.token)
